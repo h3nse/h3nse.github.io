@@ -1,4 +1,5 @@
-while(True): 
+inputCheck = True
+while(inputCheck): 
     talStr = input ("Hvilke tal?(Separer med mellemrum)")
     talStr = talStr.split()
     tal = []
@@ -6,14 +7,20 @@ while(True):
         try:
             i = float(i)
             tal.append(i)
+            inputCheck = False
         except:
             print("Nogle værdier er ikke korrekte tal, prøv igen")
-            continue
-    break
+            break
+    
 
-largestNumber = 0
+largestNumber = tal[1]
 for n in tal:
     if(n > largestNumber):
         largestNumber = n
 
-print(f"Det største tal er {largestNumber}")
+smallestNumber = tal[1]
+for n in tal:
+    if(n < smallestNumber):
+        smallestNumber = n
+
+print(f"Det største tal er {largestNumber} og det mindste tal er {smallestNumber}")

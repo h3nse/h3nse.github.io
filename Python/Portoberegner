@@ -1,0 +1,23 @@
+import sys
+
+while(True): 
+    gram = input ("Hvor mange gram vejer din pakke?")
+    try:
+        gram = float(gram)
+        break
+    except:
+        print("Det er ikke en korrekt værdi, prøv igen")
+
+if(gram > 2000):
+    print("Undskyld vi kan ikke sende pakken")
+    sys.exit()
+if(gram > 500 and gram < 2000):
+    porto = 60
+if(gram > 250 and gram < 500):
+    porto = 48
+if(gram > 100 and gram < 250):
+    porto = 24
+if(gram > 50 and gram < 100):
+    porto = 12
+
+print (f"Det koster {porto} kr")

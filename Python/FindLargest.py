@@ -6,14 +6,15 @@ while(inputCheck):
         talStr = talStr.split()
     except:
         continue
-    for i in talStr:
-        try:
+    try:
+        for i in talStr:
             i = float(i)
             tal.append(i)
-            inputCheck = False
-        except:
-            print("Nogle værdier er ikke korrekte tal, prøv igen")
-            break
+    except:
+        print("Nogle værdier er ikke korrekte tal, prøv igen")
+        continue
+    else:
+        inputCheck = False
     
 
 largestNumber = tal[0]

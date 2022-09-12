@@ -1,8 +1,11 @@
 inputCheck = True
 while(inputCheck): 
     talStr = input ("Hvilke tal?(Separer med mellemrum)")
-    talStr = talStr.split()
     tal = []
+    try:
+        talStr = talStr.split()
+    except:
+        continue
     for i in talStr:
         try:
             i = float(i)
@@ -13,12 +16,12 @@ while(inputCheck):
             break
     
 
-largestNumber = tal[1]
+largestNumber = tal[0]
 for n in tal:
     if(n > largestNumber):
         largestNumber = n
 
-smallestNumber = tal[1]
+smallestNumber = tal[0]
 for n in tal:
     if(n < smallestNumber):
         smallestNumber = n

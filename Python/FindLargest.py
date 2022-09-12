@@ -1,5 +1,4 @@
-inputCheck = True
-while(inputCheck): 
+while(True): 
     talStr = input ("Hvilke tal?(Separer med mellemrum)")
     tal = []
     try:
@@ -14,7 +13,7 @@ while(inputCheck):
         print("Nogle værdier er ikke korrekte tal, prøv igen")
         continue
     else:
-        inputCheck = False
+        break
     
 
 largestNumber = tal[0]

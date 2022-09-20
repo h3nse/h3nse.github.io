@@ -1,6 +1,7 @@
 import sys
 
 #Program veksler fra DKK til Euro med en kommision på 2% eller 0.5, hvadend der er højest
+
 while(True): 
     kroner = input ("Hvor mange kroner?")
     try:
@@ -16,6 +17,6 @@ if(euro/50 < 0.5):
 else:
     kommision = euro/50
 
-euroTilbage = euro - euro/50
+euroTilbage = euro - kommision
 print(f"Du får {euroTilbage} euro tilbage")
 

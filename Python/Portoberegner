@@ -19,5 +19,7 @@ if(gram > 100 and gram < 250):
     porto = 24
 if(gram > 50 and gram < 100):
     porto = 12
+else:
+    print("Vi sender ikke pakker under 50 gram")
 
 print (f"Det koster {porto} kr")

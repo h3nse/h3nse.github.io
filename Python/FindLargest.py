@@ -4,6 +4,7 @@ while(True):
     try:
         talStr = talStr.split()
     except:
+        print("værdierne er ikke formuleret korrekt... Prøv igen")
         continue
     try:
         for i in talStr:
